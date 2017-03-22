@@ -7,6 +7,8 @@
          racket/string)
 
 (provide lex/1 tokenize)
+(module+ lex-abbrevs
+  (provide hide-char splice-char id-char letter digit NL id))
 
 ;; A newline can be any one of the following.
 (define-lex-abbrev NL (:or "\r\n" "\r" "\n"))
